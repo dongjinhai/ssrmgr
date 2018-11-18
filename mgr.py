@@ -369,12 +369,12 @@ class UserMgr(object):
         usage = self.record_data_usage()
         rest = requests.post(r"{}/api/transfer/".format(config.WEBAPI_DOMAIN),
                              headers=headers,
-                             data=json.dumps({"datas": usage}),
-                             timeout=1)
+                             data=json.dumps(usage),
+                             timeout=20)
         logging.info("上报用户流量结果，HTTP状态码：{}".format(rest.status_code))
 
 
 if __name__ == '__main__':
     pass
-    hm = HostMgr()
-    hm.report_status()
+    hm = UserMgr()
+    hm.send_data_usage()

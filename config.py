@@ -2,6 +2,7 @@
 TOKEN_USERNAME = 'username'
 TOKEN_PASSWORD = 'password'
 WEBAPI_DOMAIN = 'http://www.djhmgr.top'
+# WEBAPI_DOMAIN = 'http://127.0.0.1:8000'
 
 #Node Information
 NODE_ID = 3
